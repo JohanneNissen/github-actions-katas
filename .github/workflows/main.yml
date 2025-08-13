@@ -37,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE_ERRORS: true
   Docker-image:
-    runs-on: ubunto.latest
+    runs-on: ubunto-latest
     needs: [Build]
     permissions:
       packages: write
