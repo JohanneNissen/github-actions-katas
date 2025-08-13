@@ -44,7 +44,7 @@ jobs:
           name: code
           path: .
         env:
-          docker_username: ${{ johanne }}
+          docker_username: johanne
           docker_password: ${{ secrets.GITHUB_TOKEN }}
           GIT_COMMIT: ${{github.sha}}
       - name: build docker
