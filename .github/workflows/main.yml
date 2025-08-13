@@ -18,16 +18,16 @@ jobs:
           path: .
           include-hidden-files: true
   Linting:
-    rund-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [Build]
     steps:
       - name: Download code
         uses: actions/download-artifact@v4
       - name: run linting
-        uses: super-linter/super-linter/slim
+        uses: super-linter/super-linter/slim@v7
         env:
           DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE_ERRORS: true
         
 
