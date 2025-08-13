@@ -12,4 +12,10 @@ jobs:
       - name: run unit test
         run: ci/unit-test-app.sh
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: code
+          path: .
+          include-hidden-files: true
+
 
